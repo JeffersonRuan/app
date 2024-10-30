@@ -1,7 +1,8 @@
 <template>
   <!-- <TheHeader /> -->
   <!-- <TwoWay /> -->
-  <EventosJs />
+  <!-- <EventosJs /> -->
+  <PropComputed />
 
   <div v-show="showUsuario">
     <div v-if="acessLevel === 'admin'">Usuário Admin</div>
@@ -19,14 +20,16 @@
 <script>
 // import TheHeader from './components/TheHeader.vue';
 // import TwoWay from './components/TwoWay.vue';
-import EventosJs from './components/EventosJs.vue'
+// import EventosJs from './components/EventosJs.vue'
+import PropComputed from './components/PropComputed.vue';
 
 export default {
   name: 'App',
   components: {
     // TheHeader,
     // TwoWay,
-    EventosJs
+    // EventosJs,
+    PropComputed
   },
   data() {
     return {
