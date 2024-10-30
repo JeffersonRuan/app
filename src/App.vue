@@ -2,7 +2,8 @@
   <!-- <TheHeader /> -->
   <!-- <TwoWay /> -->
   <!-- <EventosJs /> -->
-  <PropComputed />
+  <!-- <PropComputed /> -->
+  <ObsWatch />
 
   <div v-show="showUsuario">
     <div v-if="acessLevel === 'admin'">Usuário Admin</div>
@@ -21,7 +22,8 @@
 // import TheHeader from './components/TheHeader.vue';
 // import TwoWay from './components/TwoWay.vue';
 // import EventosJs from './components/EventosJs.vue'
-import PropComputed from './components/PropComputed.vue';
+// import PropComputed from './components/PropComputed.vue';
+import ObsWatch from './components/ObsWatch.vue';
 
 export default {
   name: 'App',
@@ -29,7 +31,8 @@ export default {
     // TheHeader,
     // TwoWay,
     // EventosJs,
-    PropComputed
+    // PropComputed,
+    ObsWatch
   },
   data() {
     return {
