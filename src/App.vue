@@ -1,6 +1,10 @@
 <template>
   <div>
-    <BaseCard />
+    <BaseAlert :variant="variant">
+      {{ text }}
+    </BaseAlert>
+
+  
   </div>
 
   <div v-show="showUsuario">
@@ -17,13 +21,11 @@
 </template>
 
 <script>
-import BaseCard from './components/BaseCard.vue';
-
-
+import BaseAlert from './components/BaseAlert.vue';
 
 export default {
   name: 'App',
-  components: { BaseCard },
+  components: { BaseAlert },
   data() {
     return {
       showHeader: false,
@@ -31,7 +33,9 @@ export default {
       lastName: 'Snow',
       showName: false,
       showUsuario: false,
-      acessLevel: 'admin'
+      acessLevel: 'admin',
+      variant: 'success',
+      text: 'Seu formulário foi enviado!'
     }
   }
 }
