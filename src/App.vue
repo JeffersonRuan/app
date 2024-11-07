@@ -1,4 +1,7 @@
 <template>
+  <div>
+    <BaseCard />
+  </div>
 
   <div v-show="showUsuario">
     <div v-if="acessLevel === 'admin'">Usuário Admin</div>
@@ -14,13 +17,13 @@
 </template>
 
 <script>
+import BaseCard from './components/BaseCard.vue';
+
 
 
 export default {
   name: 'App',
-  components: {
-
-  },
+  components: { BaseCard },
   data() {
     return {
       showHeader: false,
@@ -35,5 +38,11 @@ export default {
 </script>
 
 <style>
-
+#app {
+        font-family: Avenir, Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #2c3e50;
+        margin: 60px;
+    }
 </style>
