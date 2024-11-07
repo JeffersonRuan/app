@@ -1,6 +1,10 @@
 <template>
   <div>
-    <BaseAlert :variant="variant">
+    <BaseAlert 
+      v-if="showAlert"
+      :variant="variant"
+      @close="onClose()"
+    >
       {{ text }}
     </BaseAlert>
 
@@ -34,8 +38,15 @@ export default {
       showName: false,
       showUsuario: false,
       acessLevel: 'admin',
+      showAlert: true,
       variant: 'success',
       text: 'Seu formulário foi enviado!'
+    }
+  },
+  methods: {
+    onClose() {
+      this.showAlert = false;
+      console.log('on close')
     }
   }
 }

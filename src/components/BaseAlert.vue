@@ -1,12 +1,21 @@
 <template>
     <div :class="baseClass">
         <slot />
+
+        <button @click="onClick">
+            X
+        </button>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['variant'],
+    props: {
+      variant: {
+        type: String,
+        default: ''
+      }  
+    },
     computed: {
         baseClass() {
             return [
@@ -15,11 +24,19 @@ export default {
             ]
         },
     },
+    methods: {
+        onClick() {
+            this.$emit('close')
+            console.log('clicou');
+        }
+    }
 }
 </script>
 
 <style scoped>
 .alert {
+    display: flex;
+    justify-content: space-between;
     padding: 5px;
     border-radius: 6px;
     color: gray;
